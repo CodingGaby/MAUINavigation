@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NavigationApp.Pages.MainTabbedPage"
+             xmlns:pages="clr-namespace:NavigationApp.Pages"
+             BarBackgroundColor="MediumPurple"
+             BarTextColor="White"
+             UnselectedTabColor="White"
+             SelectedTabColor="#ccc1f1"
+             >
+    <ContentPage
+        IconImageSource="house.png"
+        Title="Home"
+        >
+        <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Label Text="Home Page Soon..."/>
+        </VerticalStackLayout>
+        
+    </ContentPage>
+    
+    <NavigationPage
+        Title="News"
+        IconImageSource="newspaper.png"       
+        >
+        <x:Arguments>
+            <pages:NewsPage 
+                />
+        </x:Arguments>
+    </NavigationPage>
+    
+    <pages:SettingsPage 
+        Title="Settings"
+        IconImageSource="settings.png"
+        />
+</TabbedPage>
